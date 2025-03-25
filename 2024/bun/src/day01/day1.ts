@@ -1,8 +1,10 @@
-import file1 from "./day1.txt" with { type: "text" };
+import getPuzzle from "../getPuzzle";
+
+const data = await getPuzzle(2024, 1);
 
 const newLineChar = "\n";
 
-const splittedLines = file1.split(newLineChar);
+const splittedLines = data.split(newLineChar);
 
 function getSplittedColumns(lines: Array<string>): [Array<number>, Array<number>] {
     const col1: Array<number> = [];
