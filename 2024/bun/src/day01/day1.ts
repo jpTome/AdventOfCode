@@ -1,4 +1,4 @@
-import getPuzzle from "../getPuzzle";
+import { getPuzzle } from "../utils";
 
 const data = await getPuzzle(2024, 1);
 

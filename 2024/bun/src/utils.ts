@@ -1,4 +1,4 @@
-export default async function(year: number, day: number) {
+export async function getPuzzle(year: number, day: number) {
     const request = await fetch(`https://adventofcode.com/${year}/day/${day}/input`, {
         headers: {
             "User-Agent": import.meta.env.USER_AGENT,
@@ -6,4 +6,10 @@ export default async function(year: number, day: number) {
         }
     });
     return await request.text();
+}
+
+export function splitStringByLines(str: string) {
+    const newLineChar = "\n";
+
+    return str.split(newLineChar);
 }
