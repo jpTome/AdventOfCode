@@ -11,5 +11,5 @@ export async function getPuzzle(year: number, day: number) {
 export function splitStringByLines(str: string) {
     const newLineChar = "\n";
 
-    return str.split(newLineChar);
+    return str.split(newLineChar).filter(line => line);
 }
